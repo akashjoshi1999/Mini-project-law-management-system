@@ -1,0 +1,6 @@
+login.php
+logout.php
+register.php
+activate.php
+numgen.php - generate code
+forgot_Pass.php 
