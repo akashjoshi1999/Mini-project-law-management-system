@@ -15,8 +15,7 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<div>
-
+<div class="bg">
 <nav class="navbar navbar-default navbar-fixed-top navbar-expand-sm">
 	<div class="container">
 		<div class="navbar-header">
@@ -40,18 +39,14 @@
                         <div class="dropdown-content">
                             <a href="CRIMINAL.PHP" class="a_drop">CRIMINAL</a>
                             <a href="CORPORATE.php" class="a_drop">CORPORATE</a>
-                            <a href="#" class="a_drop">CIVIL</a>
-                            <a href="#" class="a_drop">COMERCIAL</a>
+                            <a href="CIVIL.php" class="a_drop">CIVIL</a>
+                            <a href="COMMERCIAL.php" class="a_drop">COMERCIAL</a>
                         </div>            
                     </div>
                 </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropbtn">CASE</button>
-                        <div class="dropdown-content">
-                            <a href="addcase.php" class="a_drop">ADD CASE</a>
-                            <a href="currentcase.php" class="a_drop">CURRENT CASE</a>
-                        </div>
+                        <button class="dropbtn" onclick="location.href='response.php';" type="button">CASE</button>
                     </div>
                 </li>
                 <li>
@@ -108,9 +103,6 @@
 		</div>
     </div>
 </nav>
-</div>
-<div>
-    <img srs="img/justice3.jpg" style="width:100%"; alt="justice">
 </div>
 </body>
 </html>
