@@ -14,6 +14,18 @@ body{
     font-family: Montserrat, sans-serif;
     border-radius: 10px;
   }
+  .bg {
+    /* The image used */
+    background-image: url("img/justice3.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
   }

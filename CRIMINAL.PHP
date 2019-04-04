@@ -25,15 +25,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li>
-                <div class="dropd">
-                        <button class="dropdbtn">CASE</button>
-                        <div class="dropd-content">
-                            <a href="addcase.php" class="a_drop">ADD CASE</a>
-                            <a href="currentcase.php" class="a_drop">CURRENT CASE</a>
-                        </div>
-                    </div>
-                </li>
+				
                 <li>
                     <div class="dropd">
                         <button class="dropbtn" onclick="location.href='clogout.php';" type="button">LOG OUT</button>

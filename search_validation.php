@@ -14,6 +14,9 @@
     button{
         background:#14a020;
     }
+    table, td {
+  border: 1px solid black;
+}
     </style>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -45,7 +48,7 @@ if(isset($_POST["sdata"]))
         {
             
 			$s_location = test_input($_POST["location"]);
-			$sql = "SELECT * FROM search_lawyer WHERE location = '$s_location' AND experience='$s_expert' AND law = '$s_profession'";
+			$sql = "SELECT * FROM search_lawyer WHERE location = '$s_location' OR experience='$s_expert' OR law = '$s_profession'";
             $res = $conn->query($sql);
             echo "<h2>Searched Lawyer</h2>";
             if ($res->num_rows > 0)
@@ -53,42 +56,39 @@ if(isset($_POST["sdata"]))
                 echo "<div class='container-fluid'>";
                 echo "<div class='row'>";
                     while($row = $res->fetch_assoc()) { 
-                        echo "<form action='L_details.php' metrod='post'>";
+                        echo "<form action='L_details.php' method='post'>";
                         echo "<table class='table table-striped'>";
-                        echo "<tr><td><div class='col-sm-4'>";
-                        echo "<img src=";
-                        echo $row["photo"].">";
-                        echo "</div></td></tr>";
                         echo "<tr><td>";
-                        echo "<div class='col-sm-5'>";
-                        echo "ID No. :";
+                        echo "<img src=";
+                        echo 'img/sapan-r-patel-advocate.jpg'.">";
+                        echo "</td><td><table>";
+                        echo "<tr><td><br><br>";
+                        echo "Email ID:";
                         echo "<input type='text'";
-                        echo "value=".$row["id"];
-                        echo "><br><br>";
+                        echo "value=".$row["email"]."></td></tr>";
                         echo "<input type='hidden'";
-                        echo "value=".$row["id"];
-                        echo "name='ID_NO'".">";
-                        echo "Name :";
+                        echo "value=".$row["email"];
+                        echo " name='ID_NO'".">";
+                        echo "<tr><td>Name :";
                         echo "<input type='text'";
                         echo "value=".$row["name"];
-                        echo "><br><br>";
-                        echo "Location :";
+                        echo "></td></tr>";
+                        echo "<tr><td>Location :";
                         echo "<input type='text'";
                         echo "value=".$row["location"];
-                        echo "><br><br>";
-                        echo "Professionality :";
+                        echo "></td></tr>";
+                        echo "<tr><td>Professionality :";
                         echo "<input type='text'";
                         echo "value=".$row["law"];
-                        echo "><br><br>";
-                        echo "Experience :";
+                        echo "></td></tr>";
+                        echo "<tr><td>Experience :";
                         echo "<input type='text'";
                         echo "value=".$row["experience"];
-                        echo "><br>";
-                        echo "</div></td></tr><tr><td>";
-                        echo "<div class='col-sm-3'>";
+                        echo "></td></tr>";
+                        echo "</table></td><td><br><br><br>";
                             echo "<button class='btn btn-lg'";
                             echo "name='L_details'>Enquire now</button>";
-                        echo "</div></td></tr>";
+                        echo "</td></tr>";
                         echo "</table></form>";
                     }
                 echo "</div>";
@@ -107,7 +107,7 @@ if(isset($_POST["sdata"]))
         {
             $loactionErr = $nameErr = "enter location or name of lawyer eitrer botr details";
             $s_name = test_input($_POST["name"]);
-            $sql = "SELECT * FROM search_lawyer WHERE name = '$s_name' AND experience='$s_expert' AND law = '$s_profession'";
+            $sql = "SELECT * FROM search_lawyer WHERE name = '$s_name' OR experience='$s_expert' OR law = '$s_profession'";
             $res = $conn->query($sql);
             echo "<h2>Searched Lawyer</h2>";
             if ($res->num_rows > 0)
@@ -116,42 +116,38 @@ if(isset($_POST["sdata"]))
                 echo "<div class='row'>";
                     while($row = $res->fetch_assoc()) {
                         
-                        echo "<form action='L_details.php' metrod='post'>";
+                        echo "<form action='L_details.php' method='post'>";
                         echo "<table class='table table-striped'>";
-                        echo "<tr><td><div class='col-sm-4'>";
+                        echo "<tr><td><br><br>";
                         echo "<img src=";
-                        echo $row["photo"].">";
-                        echo "</div></td></tr>";
+                        echo 'img/sapan-r-patel-advocate.jpg'.">";
+                        echo "</td><td><table>";
                         echo "<tr><td>";
-                        echo "<div class='col-sm-5'>";
-                        echo "ID No. :";
-                        echo "<input type='text'";
-                        echo "value=".$row["id"];
-                        echo "><br><br>";
-                        echo "<input type='hidden'";
-                        echo "value=".$row["id"];
-                        echo "name='ID_NO'".">";
-                        echo "Name :";
-                        echo "<input type='text'";
+                        echo "Email ID:";
+                        echo "<input type='text' value=".$row["email"]."></td></tr>";
+                        echo "<input type='hidden' ";
+                        echo "value=".$row["email"];
+                        echo " name='ID_NO'"."><br>";
+                        echo "<tr><td>Name :";
+                        echo "<input type='text' ";
                         echo "value=".$row["name"];
-                        echo "><br><br>";
-                        echo "Location :";
-                        echo "<input type='text'";
+                        echo "></td></tr>";
+                        echo "<tr><td>Location :";
+                        echo "<input type='text' ";
                         echo "value=".$row["location"];
-                        echo "><br><br>";
-                        echo "Professionality :";
-                        echo "<input type='text'";
+                        echo "></td></tr>";
+                        echo "<tr><td>Professionality :";
+                        echo "<input type='text' ";
                         echo "value=".$row["law"];
-                        echo "><br><br>";
-                        echo "Experience :";
+                        echo "></td></tr>";
+                        echo "<tr><td>Experience :";
                         echo "<input type='text'";
                         echo "value=".$row["experience"];
-                        echo "><br>";
-                        echo "</div></td></tr><tr><td>";
-                        echo "<div class='col-sm-3'>";
+                        echo "></td></tr>";
+                        echo "</table></td><td><br><br><br>";
                             echo "<button class='btn btn-lg'";
                             echo "name='L_details'>Enquire now</button>";
-                        echo "</div></td></tr>";
+                        echo "</td></tr>";
                         echo "</table></form>";
                     }
                 echo "</div>";
@@ -167,7 +163,7 @@ if(isset($_POST["sdata"]))
         {
             $s_name = test_input($_POST["name"]);
             $s_location = test_input($_POST["location"]);
-            $sql = "SELECT * FROM search_lawyer WHERE location = '$s_location' AND experience='$s_expert' AND name='$s_name' AND law = '$s_profession'";
+            $sql = "SELECT * FROM search_lawyer WHERE location = '$s_location' OR experience='$s_expert' OR name='$s_name' OR law = '$s_profession'";
             $res = $conn->query($sql);
             echo "<h2>Searched Lawyer</h2>";
             if($res){
@@ -178,42 +174,39 @@ if(isset($_POST["sdata"]))
                 echo "<div class='row'>";
                     while($row = $res->fetch_assoc()) {
                         
-                        echo "<form action='L_details.php' metrod='post'>";
+                        echo "<form action='L_details.php' method='post'>";
                         echo "<table class='table table-striped'>";
-                        echo "<tr><td><div class='col-sm-4'>";
+                        echo "<tr><td><br><br>";
                         echo "<img src=";
-                        echo $row["photo"].">";
-                        echo "</div></td></tr>";
+                        echo 'img/sapan-r-patel-advocate.jpg'.">";
+                        echo "</td><td><table>";
                         echo "<tr><td>";
-                        echo "<div class='col-sm-5'>";
-                        echo "ID No. :";
+                        echo "Email ID:";
                         echo "<input type='text'";
-                        echo "value=".$row["id"];
-                        echo "><br><br>";
+                        echo "value=".$row["email"]."></td></tr>";
                         echo "<input type='hidden'";
-                        echo "value=".$row["id"];
-                        echo "name='ID_NO'".">";
-                        echo "Name :";
+                        echo "value=".$row["email"];
+                        echo " name='ID_NO'"."><br><br>";
+                        echo "<tr><td>Name :";
                         echo "<input type='text'";
                         echo "value=".$row["name"];
-                        echo "><br><br>";
-                        echo "Location :";
+                        echo "></td></tr>";
+                        echo "<tr><td>Location :";
                         echo "<input type='text'";
                         echo "value=".$row["location"];
-                        echo "><br><br>";
-                        echo "Professionality :";
+                        echo "></td></tr>";
+                        echo "<tr><td>Professionality :";
                         echo "<input type='text'";
                         echo "value=".$row["law"];
-                        echo "><br><br>";
-                        echo "Experience :";
+                        echo "></td></tr>";
+                        echo "<tr><td>Experience :";
                         echo "<input type='text'";
                         echo "value=".$row["experience"];
-                        echo "><br>";
-                        echo "</div></td></tr><tr><td>";
-                        echo "<div class='col-sm-3'>";
+                        echo "></td></tr>";
+                        echo "</table></td><td><br><br><br>";
                             echo "<button class='btn btn-lg'";
                             echo "name='L_details'>Enquire now</button>";
-                        echo "</div></td></tr>";
+                        echo "</td></tr>";
                         echo "</table></form>";
                     }
                 echo "</div>";
@@ -232,5 +225,6 @@ if(isset($_POST["sdata"]))
         }
     }
 }
+echo "<br><br>".$row["name"];
 ?>
 </html>

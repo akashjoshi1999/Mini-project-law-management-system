@@ -20,7 +20,7 @@
                     if($pass == $pass_1)
                     {
                         session_start();
-                        $_SESSION["clogesmil"]=$id;
+                        $_SESSION["email"]=2;
                         header('Location: cindex.php');
                     }
                 }

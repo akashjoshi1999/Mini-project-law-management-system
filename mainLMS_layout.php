@@ -2,8 +2,14 @@
 require "conn.php";
 $cnameErr = $cmyemailErr = $clocationErr = $cmobileErr = $cpassErr = "";
 $cname = $cmyemail = $clocation = $cmobile = "";
-  
-if(isset($_POST["csign"]))
+
+session_start();
+    if(isset($_SESSION['email']))
+    {
+        //echo "<h1>HelloWorld</h1>";
+        header("Location: cindex.php");
+    }
+  if(isset($_POST["csign"]))
 {
 	  $cpassword_1 = $_POST["cpass"]; 
   $cpassword_2 = $_POST["cpassword"];
@@ -57,6 +63,8 @@ if(isset($_POST["csign"]))
 								$createdb = "record created succesfully";
 								if ($conn->query($sql) === TRUE)
 								{
+                  session_start();
+                  $_SESSION["id_email"] = $cmyemail;
 									header('Location: cindex.php');
 								}
 								else 
@@ -135,7 +143,8 @@ if(isset($_POST["lsign"]))
 							    }
 							    else
 							    {
-                    
+                   session_start();
+                   $_SESSION["l_email"] = '$lmyemail';
                     $sql1 = "INSERT INTO lawyerreg ( name, email, mobile,image, location, password) 
                     VALUES ('$lname', '$lmyemail', '$lmobile','$file','$llocation','$lpassword_1')";
                     if ($conn->query($sql1) === TRUE AND move_uploaded_file($_FILES['image']['tmp_name'],$target))
@@ -336,39 +345,8 @@ if(isset($_POST["lsign"]))
 		</div>
 		<div class="col-sm-2">
 		</div>
-  </div><br>
-  
-  <h2>What our client say</h2>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+  </div><br>    
     
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <h4>"This app is the best. I am so happy with the result!"<br><span>XXX</span></h4>
-      </div>
-      <div class="item">
-        <h4>"One word... WOW!!"<br><span>ABC</span></h4>
-      </div>
-      <div class="item">
-        <h4>"blesss you"<br><span>PQR</span></h4>
-      </div>
-    </div>
-
-    
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
 </div>
 

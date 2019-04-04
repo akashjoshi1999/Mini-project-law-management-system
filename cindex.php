@@ -1,3 +1,11 @@
+<?php
+session_start();
+    if(!($_SESSION["email"]==2 ))
+    {
+        //echo "HelloWorld";
+        header("Location: mainLMS_layout.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

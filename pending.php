@@ -1,14 +1,40 @@
-<?php
+<?php 
+require "conn.php";
 session_start();
-    if(!($_SESSION["email"]==3 ))
-    {
-        //echo "HelloWorld";
-        header("Location: mainLMS_layout.php");
+    $id = $_SESSION["l_email"];
+    $c_name =array(); $counter=0;
+    $sql = "SELECT * FROM lawyer_res WHERE lawyer_email = '$id'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) 
+        {
+            while($row = $result->fetch_assoc())
+            {
+                $c_name[$counter++] = $row;
+            }
+        }
+        else
+         {
+            echo "0 results";
+         }
+	echo "<br><br><br><center><from><table>";
+	for($row=0;$row<$counter;$row++)
+	{
+		echo "<tr>";
+        echo "<td>".($row+1)."</td><td>".$c_name[$row]["name"]."<input type='hidden' name='client_email' value='$c_name[$row]['email']'></td><td><button class='dropbtn' onclick='location.href='details_response.php';' style='width:auto' name='accept'>ACCEPT</td>";
+        echo "<td><button class='dropbtn' style='width:auto' name='acceptreject'>REJECT</td>";
+		echo "</tr>";
     }
+    echo "</table></from></center>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+table,td{
+    border:1px solid black;
+    padding: 10px;
+}
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,intial-scale=1">
     <meta http-equiv="X-UA-Comptible" content="IE=edge">
@@ -34,16 +60,7 @@ session_start();
 			</button>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
-			<ul class="nav navbar-nav navbar-right">
-            <li>
-                <div class="dropdown">
-                    <button class="dropbtn">CASE</button>
-                    <div class="dropdown-content">
-                        <a href="#" class="ä_drop">CURRENT</a>
-                        <a href="pending.php" class="ä_drop">PENDING</a>
-                    </div>            
-                </div>
-            </li>    
+			<ul class="nav navbar-nav navbar-right">    
             <li>
                 <div class="dropdown">
                         <button class="dropbtn" onclick="location.href='appointment.php';" type="button">APPPOINTMENT</button>
@@ -66,8 +83,7 @@ session_start();
             </li>
             </ul>
 		</div>
-    </div>
-    
+    </div> 
 </nav>
 </body>
 </html>

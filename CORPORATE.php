@@ -25,15 +25,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li>
-                <div class="dropd">
-                        <button class="dropdbtn">CASE</button>
-                        <div class="dropd-content">
-                            <a href="addcase.php" class="a_drop">ADD CASE</a>
-                            <a href="currentcase.php" class="a_drop">CURRENT CASE</a>
-                        </div>
-                    </div>
-                </li>
+				
                 <li>
                     <div class="dropd">
                         <button class="dropbtn" onclick="location.href='clogout.php';" type="button">LOG OUT</button>
@@ -67,126 +59,124 @@
     </div>
   </div>
   <div class="row">
-  <h2 style="font-family:arial;"><b>Types of criminal offenses</b></h2>
+  <h2 style="font-family:arial;"><b>Types of corporate law offenses</b></h2>
     
-      <h4>Although there are many different kinds of crimes, criminal acts can generally be divided into four 
-          primary categories: personal crimes, property crimes, inchoate crimes,
-           statutory crimes, and financial crimes.</h4>
+      
         <div class="col-sm-8">
            <h3>Monopolization -</h3>
-        <h4>“Offenses against the Person”: These are crimes that
-            result in physical or mental harm to another person. Personal crimes include:</h4>
+        <h4>Monopolization is an illegal and the main categories of prohibited behavior:</h4>
             <ul style="list-style-type: circle;">
-                <li>Assault - an intentional act that causes a fear of imminent harmful or offensive touching.
-                    An assault can occur even if the contact never occurs. 
-                    Since the act must be intentional, an accidental action won't amount to an assault</li>
-                <li>
-                Battery - crime defined as the unlawful or unauthorized application of force to another person,
-                 resulting in contact that is either harmful or offensive to the victim.
-                 The crime of battery is usually connected with the crime of assault, which is an incomplete or attempted battery.    
+                <li>Exclusive dealing - refers to an arrangement whereby a retailer or 
+                    wholesaler is ‘tied’ to purchase from a supplier on the understanding 
+                    that no other distributor will be appointed or receive supplies in a given area.
+                     When the sales outlets are owned by the supplier, exclusive dealing is because of
+                      vertical integration.</li>
+                      <li>
+            Tying (informally, product tying) - It is the practice of selling one product or service as a
+             mandatory addition to the purchase of a different product or service. In legal terms, a 
+             tying sale makes the sale of one good (the tying good) to the de facto customer (or de jure customer) 
+             conditional on the purchase of a second distinctive good (the tied good).
+                </li>
+                      <li>
+                Price discrimination -  It is a microeconomic pricing strategy where 
+                identical or largely similar goods or services are transacted at different
+                 prices by the same provider in different markets.    
             </li>
-            <li>
-            False Imprisonment
-                </li>
+            
                 <li>
-                Kidnapping
+                Predatory pricing - It also known as undercutting, is a pricing strategy in which 
+                a product or service is set at a very low price with the intention to achieve new 
+                customers (Loss leader), or driving competitors out of the market or to create barriers 
+                to entry for potential new competitors.
                 </li>
-                <li>
-                Homicide – crimes such as first and second degree, murder, and involuntary manslaughter, and vehicular homicide
-                </li>
-                <li>
-                Rape, statutory rape, sexual assault and other offenses of a sexual nature
-            </li>
+               
             </ul>
             </div>
             <div class="col-sm-4"><br><br>
                 <img style="max-width:400px; margin-top: 25px;"
-                    src="img/500_F_175891991_DOtzUw44wPfEICL6bfjlq0ETI3oeFV7J.jpg">
+                    src="img/monopolization.jpg">
                 </div>
         <div class="col-sm-8">
         <h3>Deceptive pricing -</h3>
-        <h4>Property crimes typically involve interference with the property of another. 
-            Although they may involve physical or mental harm to another, they primarily result in the 
-            deprivation of the use or enjoyment of property. Many property crimes are theft crimes, including
-            burglary, larceny, robbery, auto theft, and shoplifting</h4>
+        <h4>Deceptive pricing is the method by which retailers use deceptive means to trick the 
+            customers into thinking that they are paying a lower price for the product, than what they 
+            are actually supposed to. Commonly used methods used by retailers practicing deceptive pricing 
+            are clearance sales and ‘going out of business’ sales, discount sales with hidden fees etc.</h4>
         </div>
         <div class="col-sm-4">
                 <img style="max-width:250px; margin-top: 25px;"
-                    src="img/robber-mask-carries-bag-thief-robs-house-property-insurance-illustration-vector-format-63403511.jpg">
+                    src="img/deceptive.jpg">
                 </div>
         <div class="col-sm-8">
             <h3>False Advertising claims -</h3>
-        <h4>Inchoate crimes refer to those crimes that were initiated but not completed,
-             and acts that assist in the commission of another crime. Inchoate crimes require more than a
-              person simply intending or hoping to commit a crime. Rather, the individual must take a “substantial step”
-               towards the completion of the crime in order to be found guilty. Inchoate crimes include aiding and 
-               abetting, attempt, and conspiracy. In some cases, inchoate crimes can be punished to the same degree that 
-               the underlying crime would be punished, while in other cases, the punishment might be less severe.</h4>
+        <h4>False advertising is the use of false, misleading, or unproven information to advertise 
+            products to consumers. The advertising frequently does not disclose its source. One form of
+             false advertising is to claim that a product has a health benefit or contains vitamins or minerals 
+             that it in fact does not.</h4>
         </div>
         <div class="col-sm-4">  
-        <img style="max-width:300px; margin-top: 25px;"
-                    src="img/crime-scene-25252141.jpg">
+        <img style="max-width:300px; margin-top: 35px;"
+                    src="img/false.jpg">
                 </div>
         <div class="col-sm-8">
         <h3>Environmental Crime -</h3>
-        <h4>Statutory crimes include those crimes, in addition to the crimes discussed above,
-             which are proscribed by statute. Three significant types of statutory crimes are alcohol related crimes,
-              drug crimes, traffic offenses, and financial/white collar crimes. These crimes are specifically prohibited by
-               statute because society hopes to deter individuals from engaging in them. Alcohol-related crimes include a
-                variety of offenses regarding how and where alcohol can be consumed, such as:</h4>
+        <h4>Environmental crime is now becoming a serious problem worldwide in different forms,
+             with some of them being among the most profitable criminal activities in the world. The most 
+             common crimes against the environment are connected with the unlawful exploitation of wild fauna 
+             and flora, pollution, waste disposal and its trade.</h4>
             <ul style="list-style-type: circle;">
                 <li>    
-                Driving Under the Influence (DUI/OWI/DWI) - 
-                Driving Under the Influence (DUI) is a crime under state laws that seek to regulate the operation of a 
-                vehicle after a driver has consumed alcohol. DUIs typically make it illegal for a driver who has had more
-                 than a certain amount of alcohol to get behind the wheel of a car. DUIs are also referred to as driving while
-                  intoxicated (DWI) or operating while intoxicated (OWI). A DUI is a criminal offense with serious criminal 
-                  and civil penalties.
+                Wild animal traffic -  Regarded by the Interpol as the third largest illegal business in the world 
+                –after drug and arms trafficking –wild animal traffic raises a serious threat for the world´s
+                 biodiversity survival
                 </li>
                 <li>
-                Open Contaiuner Voilations - Open container laws are defined as laws that limit or prohibit the possession 
-                of open containers of alcohol in public areas.
+                Indiscriminate logging - Main cause of deforestation. The Amazon destruction –the 
+                largest rainforest in the world –speeded up in 2013 at a 29% rise in deforestation, according to
+                 the Brazilian government. The uncontrolled logging to get wood for furniture or other goods –or
+                  even for farm lands –is the most serious cause of this environmental crime.
                 </li>
                 <li>
-                    Minor in possession of Alcohol -
-                    Minor in possession of alcohol laws criminalize the possession and consumption of alcohol by individuals
-                     who are under the legal drinking age. The purpose of these laws is to strictly punish underage drinkers and
-                      deter illegal alcohol consumption.
+                Electronic waste mismanagement -
+                In the so-called developed countries there are up to 50 million tonnes of
+                 electronic waste every year.
+                  And up to 75% of all these is estimated to leave the official circuit and a good deal of them to be 
+                  illegally exported to Africa, China or India.
                 </li>
                 <li>
-                        underage DUI -
-                        Like a standard DUI, an underage DUI criminalizes the actions of a driver 
-                        who gets behind the wheel of a vehicle after having too much to drink. However,
-                         underage DUIs specifically target drivers who are under the age of 21 and have
-                          committed the dual offenses of illegal consumption of alcohol and driving while intoxicated. 
-                          Since underage drunk drivers are particularly dangerous, they are subject to strict laws and penalties.
+                Finning -
+                A hundred million sharks are captured every year by 
+                specialised ships and up to 70 million of them are captured to only
+                 have their fins cut off alive on the ship and then be thrown back into the sea
                 </li>
         <li>    
-        Boating DUI - 
-        States criminalize DUIs because cars are very powerful vehicles that can cause serious harm to others if the 
-        driver is incapacitated. For the same reason, operating a watercraft or boat while intoxicated is held to be 
-        a very dangerous crime, also known as a BUI. BUIs are the cause of an increasing number of fatal and non-fatal 
-        injuries that occur on the water.    
+        Dumping in rivers and aquifers-
+        This kind of environmental crime is most often caused by companies,
+         factories and Public Administrations. Faecal and toxic waste coming from
+          factories is usually dumped in a controlled way, but this is not always the case.
+           In these cases waste is uncontrollably released into the environment, while at the same
+            time polluting rivers, lakes aquifers, etc.   
     </li>
     </ul>
 </div>
-<div class="col-sm-4"><br><br><br><br><br>
+<div class="col-sm-4"><br><br><br>
+<!--<ul style="list-style-type: none;">
+<li><img style="max-width:400px; margin-top: 25px;"
+                    src="img/mono_ok.jpg"></li>
+<li><img style="max-width:400px; margin-top: 25px;"
+                    src="img/def_ok.jpg"></li>
+<li><img style="max-width:400px; margin-top: 25px;"
+                    src="img/basura_ok.jpg"></li>
+<li><img style="max-width:400px; margin-top: 25px;"
+                    src="img/finn_ok.jpg"></li>
+<li><img style="max-width:400px; margin-top: 25px;"
+                    src="img/vert_ok.jpg"></li>
+                
+</ul>-->
 <img style="max-width:400px; margin-top: 25px;"
-                    src="img/cocaine-drug-addiction-lines-one-hundred-dollars-banknote-black-background-closeup-82739297.jpg">
-                </div>
-    <div class="col-sm-8">
-    <h3>Safe of Unsafe Product</h3>
-    <h4>
-    Finally, financial crimes often involve deception or fraud for financial gain. Although white-collar`
-     crimes derive their name from the corporate officers who historically perpetrated them, anyone in any industry
-      can commit a white-collar crime. These crimes include many types of fraud and blackmail, embezzlement and money
-       laundering, tax evasion, and cybercrime.
-    </h4>
-    </div>
-    <div class="col-sm-4">
-    <img style="max-width:350px; margin-top: 25px;"
-                    src="img/metallic-handcuffs-money-financial-crime-concept-metallic-handcuffs-money-financial-crime-concept-140361071.jpg">
-                </div>
+                    src="img/ecocide-earth1_large.jpg">
+</div>
+    
 </div>
 	
   </div> 

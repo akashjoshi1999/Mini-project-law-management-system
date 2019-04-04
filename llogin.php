@@ -18,9 +18,10 @@
                 {
                     $pass = $row["password"];
                     if($pass == $pass_1)
-                    { 
+                    {
                         session_start();
-                        $_SESSION["llogesmil"]=$id;
+                        $_SESSION["email"]=3;
+                        $_SESSION["l_email"] = $id;
                         header('Location: lindex.php');
                     }
                 }
